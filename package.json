@@ -9,7 +9,8 @@
 		"preview": "vite preview --host=0.0.0.0 --port=8080",
 		"test": "NODE_ENV=test jest",
 		"prepare": "npx husky install",
-		"commitmsg": "commitlint -E HUSKY_GIT_PARAMS"
+		"commitmsg": "commitlint -E HUSKY_GIT_PARAMS",
+		"assets-generate": "node ./assets-generator.js"
 	},
 	"husky": {
 		"hooks": {
@@ -57,6 +58,7 @@
 		"jest-watch-typeahead": "^2.2.2",
 		"lint-staged": "^13.2.2",
 		"prettier": "^2.8.8",
+		"pwa-asset-generator": "^6.3.1",
 		"react-test-renderer": "^18.2.0",
 		"typescript": "^5.0.2",
 		"vite": "^4.3.2",
