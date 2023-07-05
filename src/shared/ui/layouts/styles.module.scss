@@ -1,0 +1,36 @@
+.app {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+
+	--header-height: 56px;
+}
+
+.header {
+	height: var(--header-height);
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+
+	margin-top: var(--header-height);
+	margin-bottom: 50px;
+}
+
+.footer {
+}
+
+.container {
+	width: 100%;
+	max-width: var(--max-width);
+	height: inherit;
+
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+.section {
+	flex: 1 0 auto;
+}
