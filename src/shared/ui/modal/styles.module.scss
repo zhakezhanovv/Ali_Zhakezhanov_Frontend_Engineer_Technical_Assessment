@@ -1,0 +1,88 @@
+html:has(.modal[data-is-open='true']) {
+	overflow: hidden;
+}
+
+.modal {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 9999;
+
+	padding: 15px 10px;
+
+	&[data-is-open='true'] &__content {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	&[data-is-open='false'],
+	&[data-is-open='false'] &__overlay,
+	&[data-is-open='false'] &__content {
+		pointer-events: none;
+	}
+
+	&[data-is-open='false'] &__overlay {
+		opacity: 0;
+	}
+
+	&__overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+
+		background-color: rgba(0, 0, 0, 0.5);
+
+		will-change: opacity;
+		transition: opacity 0.4s;
+	}
+
+	&__content {
+		width: 100%;
+		max-width: 400px;
+
+		background-color: white;
+		border-radius: 8px;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+		overflow: scroll;
+
+		padding: 20px;
+
+		opacity: 0;
+		transform: translateY(-50%);
+
+		will-change: opacity, transform;
+		transition: opacity 0.4s, transform 0.4s;
+
+		position: relative;
+
+		&__close_button {
+			position: absolute;
+			top: 15px;
+			right: 15px;
+
+			width: 23px;
+			height: 23px;
+
+			cursor: pointer;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.modal {
+		&__content {
+			img {
+				/* width: ;
+				height: 20px; */
+			}
+		}
+	}
+}
