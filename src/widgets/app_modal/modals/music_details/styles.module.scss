@@ -1,0 +1,161 @@
+.music_details__content {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	max-width: 100%;
+	height: 100%;
+
+	padding-top: 50px;
+
+	&__details {
+		display: grid;
+		grid-template-columns: 20% 80%;
+		grid-gap: 20px;
+		width: 100%;
+
+		&__img {
+			width: 100%;
+			box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+			border-radius: 15px;
+		}
+
+		&__info {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+
+			&__header {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				width: 100%;
+				height: fit-content;
+
+				padding-right: 50px;
+
+				h1 {
+					font-size: 2.3rem;
+				}
+
+				h5 {
+					font-size: 1.4rem;
+				}
+			}
+
+			&__link {
+				color: #cccccc;
+				width: fit-content;
+
+				cursor: pointer;
+
+				&:hover {
+					color: var(--primary-color);
+				}
+			}
+		}
+	}
+
+	&__albums {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		grid-gap: 25px 15px;
+		width: 100%;
+
+		border: 1px solid #cccccc;
+		border-radius: 15px;
+		box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+		padding: 10px;
+
+		position: relative;
+
+		&:before {
+			content: '';
+			display: block;
+			width: 100%;
+			height: 1px;
+
+			position: absolute;
+			top: -20px;
+			left: 0;
+
+			background-color: #cccccc;
+			border-radius: 5px;
+		}
+
+		&__title {
+			font-size: 2rem;
+		}
+
+		&__card {
+			width: 250px;
+			max-width: 100%;
+			height: 250px;
+
+			position: relative;
+
+			cursor: pointer;
+
+			&__wrapper {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 10px;
+			}
+
+			&__back {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+
+				border-radius: 10px;
+			}
+		}
+	}
+
+	&__comments {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+
+		&__textarea {
+			font-size: 1rem;
+
+			border: 1px solid #cccccc;
+			border-radius: 10px;
+
+			padding: 10px;
+		}
+
+		&__content {
+			display: flex;
+			flex-direction: column;
+			gap: 15px;
+
+			&__card {
+				display: flex;
+				justify-content: space-between;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+}
+
+@media (max-width: 425px) {
+	.music_details__content {
+		&__details {
+			grid-template-rows: auto auto;
+			grid-template-columns: none;
+			/* grid-template-columns: 4fr 6fr; */
+
+			&__info {
+				&__header {
+					/* flex-direction: column; */
+				}
+			}
+		}
+	}
+}

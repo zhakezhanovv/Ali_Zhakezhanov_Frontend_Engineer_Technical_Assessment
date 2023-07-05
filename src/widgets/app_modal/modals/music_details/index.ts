@@ -1,0 +1,1 @@
+export { MusicDetailsContent } from './ui'
