@@ -1,11 +1,17 @@
+import { Pages } from '@/pages'
+import { Layout } from '@/shared/ui'
+import { AppModal } from '@/widgets/app_modal'
+
 import './index.scss'
+import { withProviders } from './providers'
 
 function App() {
 	return (
-		<div className='app'>
-			<>App</>
-		</div>
+		<Layout.App>
+			<Pages />
+			<AppModal />
+		</Layout.App>
 	)
 }
 
-export default App
+export default withProviders(App)
