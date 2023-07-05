@@ -14,7 +14,7 @@
 
 ##
 
-[Link to the deployed application](https://trash--phenomenal-sunshine-86e52f.netlify.app/)
+[Link to the deployed application](https://main--music-list-appp.netlify.app/)
 
 ## Choice of major packages
 
