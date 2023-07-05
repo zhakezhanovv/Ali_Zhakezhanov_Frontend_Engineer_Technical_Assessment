@@ -1,5 +1,5 @@
 :root {
-	--background-color: #f7f9fc;
+	--background-color: hsl(216, 45%, 98%);
 	--primary-color: #588dff;
 	--secondary-color: #977dff;
 	--white-color: #ffffff;
@@ -9,4 +9,6 @@
 	--font-family: 'Helvetica Neue', 'Helvetica, Arial', 'Lucida Grande';
 	--font-weight: normal;
 	--font-color: #000000;
+
+	--max-width: 1270px;
 }
