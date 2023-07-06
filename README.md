@@ -27,7 +27,7 @@
 7. Typescript was used over JavaScript due to stronger type checking.
 8. Sass was used over regular CSS due to better functionality and extenstions.
 
-## Impovements
+## Improvements
 
 1. Add unit tests for UI and functionality and render tests.
 2. A seperate modal window for a specific related album.
@@ -36,7 +36,7 @@
 5. Imporve UI.
 6. Implement another API with better quality image.
 
-## Assunptions and opinions gained
+## Assumptions and opinions gained
 
 1. UI of an application matters. No matter how good the functionality is, users are attracted to a fancy UI and better UX.
 2. It is really hard to make a good product in short time.
